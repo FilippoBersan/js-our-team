@@ -49,7 +49,7 @@ const nameTeam = [
 
 console.log(nameTeam);
 
-// const nomi = document.createElement('p');
+// nnconst nomi = document.createElement('p');
 
 // let paragrafo = (document.getElementById('myid').innerHTML =
 //   nameTeam.toString());
