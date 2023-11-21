@@ -65,3 +65,50 @@ for (let i = 0; i < arrayLength; i++) {
     console.log(`--`);
   }
 }
+
+// 2 milestone
+
+//  <!-- <li class="member">
+//         <div>image</div>
+//         <h3>nome</h3>
+//         <p>ruolo</p>
+//       </li>
+
+const teamElement = document.querySelector('.team');
+
+// template literal
+
+// for (let i = 0; i < nameTeam.length; i++) {
+//   const person = nameTeam[i];
+
+//   const li = `<li class="member">
+//        <div>image: ${person.foto}</div>
+//          <h3>nome: ${person.nome}</h3>
+//         <p>ruolo:  ${person.ruolo}</p>
+//      </li>`;
+
+//   teamElement.innerHTML += li;
+// }
+
+// createElement
+for (let i = 0; i < nameTeam.length; i++) {
+  const person = nameTeam[i];
+
+  // li
+  const liElement = document.createElement('li');
+  liElement.classList.add('member');
+
+  const divImageElement = document.createElement('div');
+  divImageElement.append(person.foto);
+
+  const h3NameElement = document.createElement('h3');
+  h3NameElement.append(person.nome);
+
+  const pRuolo = document.createElement('p');
+  pRuolo.append(person.ruolo);
+
+  liElement.append(divImageElement);
+  liElement.append(h3NameElement);
+  liElement.append(pRuolo);
+  teamElement.append(liElement);
+}
