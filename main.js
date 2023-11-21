@@ -47,9 +47,21 @@ const nameTeam = [
   },
 ];
 
-console.log(nameTeam);
+// 1 milestone
 
-// nnconst nomi = document.createElement('p');
+const arrayLength = nameTeam.length;
+for (let i = 0; i < arrayLength; i++) {
+  const person = nameTeam[i];
 
-// let paragrafo = (document.getElementById('myid').innerHTML =
-//   nameTeam.toString());
+  // console.log(person.nome);
+  // console.log(person.ruolo);
+  // console.log(person.foto);
+
+  for (let key in person) {
+    console.log(`${key}: ${person[key]}`);
+  }
+
+  if (!(i === arrayLength - 1)) {
+    console.log(`--`);
+  }
+}
